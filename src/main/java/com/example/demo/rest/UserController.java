@@ -1,4 +1,4 @@
-package com.example.demo.mapstruct.rest;
+package com.example.demo.rest;
 
 import com.example.demo.mapstruct.bean.dto.UserDTO;
 import com.example.demo.mapstruct.bean.po.User;
