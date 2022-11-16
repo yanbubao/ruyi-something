@@ -1,4 +1,4 @@
-package com.example.demo.mapstruct.bean.dto;
+package com.example.demo.common.mapstruct.bean.dto;
 
 import lombok.Data;
 

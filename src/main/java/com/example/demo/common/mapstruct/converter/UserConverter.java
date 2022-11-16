@@ -1,8 +1,8 @@
-package com.example.demo.mapstruct.converter;
+package com.example.demo.common.mapstruct.converter;
 
-import com.example.demo.mapstruct.bean.dto.UserDTO;
-import com.example.demo.mapstruct.bean.po.User;
-import com.example.demo.mapstruct.bean.vo.UserVO;
+import com.example.demo.common.mapstruct.bean.dto.UserDTO;
+import com.example.demo.common.mapstruct.bean.po.User;
+import com.example.demo.common.mapstruct.bean.vo.UserVO;
 import org.mapstruct.Mapper;
 
 /**

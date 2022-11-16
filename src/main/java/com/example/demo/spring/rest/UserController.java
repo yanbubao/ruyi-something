@@ -1,8 +1,8 @@
-package com.example.demo.rest;
+package com.example.demo.spring.rest;
 
-import com.example.demo.mapstruct.bean.dto.UserDTO;
-import com.example.demo.mapstruct.bean.po.User;
-import com.example.demo.mapstruct.converter.UserConverter;
+import com.example.demo.common.mapstruct.bean.dto.UserDTO;
+import com.example.demo.common.mapstruct.bean.po.User;
+import com.example.demo.common.mapstruct.converter.UserConverter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
