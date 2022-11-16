@@ -1,4 +1,4 @@
-package com.example.demo.thread;
+package com.example.demo.thread.base;
 
 /**
  * 线程的异常捕获器

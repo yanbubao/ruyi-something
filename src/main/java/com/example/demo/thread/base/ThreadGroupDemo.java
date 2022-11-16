@@ -1,4 +1,4 @@
-package com.example.demo.thread;
+package com.example.demo.thread.base;
 
 import com.google.common.collect.Lists;
 import org.checkerframework.checker.nullness.qual.Nullable;

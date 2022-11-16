@@ -1,4 +1,4 @@
-package com.example.demo.thread;
+package com.example.demo.thread.base;
 
 /**
  * 使用了一个ShutdownHook的钩子函数，用于监听当前JVM是否退出
