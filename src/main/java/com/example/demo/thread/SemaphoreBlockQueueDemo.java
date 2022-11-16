@@ -11,8 +11,6 @@ import java.util.concurrent.TimeUnit;
  * @Date 2022/11/16 23:23
  */
 public class SemaphoreBlockQueueDemo {
-    private CountDownLatch countDownLatch = new CountDownLatch(1);
-
     private final Semaphore semaphore;
     private final List<Object> list;
     private final int maxLen;
