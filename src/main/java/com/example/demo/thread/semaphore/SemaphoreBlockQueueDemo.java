@@ -1,8 +1,7 @@
-package com.example.demo.thread;
+package com.example.demo.thread.semaphore;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 

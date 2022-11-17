@@ -16,14 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 @Configuration
 public class TimeCountInterceptor implements HandlerInterceptor {
 
-    static class CommonThreadLocal<Long> extends ThreadLocal {
+    static class CommonThreadLocal extends ThreadLocal<Long> {
         @Override
-        protected Object initialValue() {
-            return -1;
+        protected Long initialValue() {
+            return -1L;
         }
     }
 
-    private static ThreadLocal<Long> TIME_COUNT = new CommonThreadLocal<>();
+    private static final CommonThreadLocal TIME_COUNT = new CommonThreadLocal();
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
