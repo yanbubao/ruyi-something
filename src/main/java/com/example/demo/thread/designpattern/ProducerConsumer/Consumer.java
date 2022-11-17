@@ -1,4 +1,4 @@
-package com.example.demo.thread.designpattern.producerConsumer;
+package com.example.demo.thread.designpattern.ProducerConsumer;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
