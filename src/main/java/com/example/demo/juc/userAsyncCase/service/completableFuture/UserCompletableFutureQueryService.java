@@ -76,7 +76,7 @@ public class UserCompletableFutureQueryService implements IUserQueryService {
 
         CompletableFuture<Integer> memberLevelFuture =
                 CompletableFuture.supplyAsync(() -> memberLevelRPCService.queryUserLevel(userId))
-                        .whenCompleteAsync((integer, throwable) -> userInfoDTO.setMemberLevel(integer));
+                        .whenCompleteAsync((userLevel, throwable) -> userInfoDTO.setMemberLevel(userLevel));
 
         CompletableFuture<List<String>> userHeadPortraitFuture =
                 CompletableFuture.supplyAsync(() -> userHeadPortraitRPCService.queryUserHeadPortrait(userId))
@@ -86,6 +86,7 @@ public class UserCompletableFutureQueryService implements IUserQueryService {
         CompletableFuture<Void> completableFuture =
                 CompletableFuture.allOf(userVerifyFuture, memberLevelFuture, userHeadPortraitFuture);
 
+        // CompletableFuture可以执行一步任务，并且在获取结果的时候不会阻塞主任务的执行，功能比 Future 要强大许多
         try {
             completableFuture.get();
         } catch (Exception e) {
