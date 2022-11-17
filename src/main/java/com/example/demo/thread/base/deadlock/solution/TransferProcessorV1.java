@@ -1,6 +1,6 @@
 package com.example.demo.thread.base.deadlock.solution;
 
-import april.concurrent.deadlock.Account;
+import com.example.demo.thread.base.deadlock.Account;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
