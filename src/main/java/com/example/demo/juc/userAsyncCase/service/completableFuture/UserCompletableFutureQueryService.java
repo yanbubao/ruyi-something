@@ -72,15 +72,15 @@ public class UserCompletableFutureQueryService implements IUserQueryService {
 
         CompletableFuture<Boolean> userVerifyFuture =
                 CompletableFuture.supplyAsync(() -> userVerifyRPCService.queryUserVerifyStatus(userId))
-                        .whenComplete((verifyStatus, throwable) -> userInfoDTO.setVerifyStatus(verifyStatus));
+                        .whenCompleteAsync((verifyStatus, throwable) -> userInfoDTO.setVerifyStatus(verifyStatus));
 
         CompletableFuture<Integer> memberLevelFuture =
                 CompletableFuture.supplyAsync(() -> memberLevelRPCService.queryUserLevel(userId))
-                        .whenComplete((integer, throwable) -> userInfoDTO.setMemberLevel(integer));
+                        .whenCompleteAsync((integer, throwable) -> userInfoDTO.setMemberLevel(integer));
 
         CompletableFuture<List<String>> userHeadPortraitFuture =
                 CompletableFuture.supplyAsync(() -> userHeadPortraitRPCService.queryUserHeadPortrait(userId))
-                        .whenComplete((resultList, throwable) -> userInfoDTO.setHeadPortrait(resultList));
+                        .whenCompleteAsync((resultList, throwable) -> userInfoDTO.setHeadPortrait(resultList));
 
         // 汇总CompletableFuture
         CompletableFuture<Void> completableFuture =
