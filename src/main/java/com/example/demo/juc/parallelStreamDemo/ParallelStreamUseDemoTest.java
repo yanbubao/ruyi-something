@@ -5,12 +5,13 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.Stream;
 
 /**
  * @Author yanzx
  * @Date 2022/11/17 18:55
  */
-public class ParallelStreamDemoTest {
+public class ParallelStreamUseDemoTest {
 
     /**
      * 对非线程安全集合使用并行流
@@ -35,5 +36,16 @@ public class ParallelStreamDemoTest {
 
         numList.parallelStream().forEach(x -> idArrayList.add(Integer.valueOf(x)));
         System.out.println(idArrayList.size());
+    }
+
+    @Test
+    public void testParallel() {
+        List<String> numList = new ArrayList<>();
+        for (int i = 0; i < 10000; i++) {
+            numList.add(String.valueOf(i));
+        }
+        numList.parallelStream();
+        numList.stream().parallel();
+        Stream.of(numList).parallel();
     }
 }
