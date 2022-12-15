@@ -19,7 +19,7 @@ public class IdTraceController {
 
     @GetMapping(value = "/do-trace")
     public String doIdTrace(){
-        userRpcService.isUserExist(1001);
+        boolean userExist = userRpcService.isUserExist(1001);
         return "success";
     }
 }
